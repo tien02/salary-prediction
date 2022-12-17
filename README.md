@@ -36,7 +36,14 @@
 pip install -r requirements.txt
 ```
 
-2. Run streamlit web app
+2. Download dataset & unzip
+
+```
+wget <link-to-data>
+unzip stack-overflow-developer-survey-2022.zip -d data
+```
+
+3. Run streamlit web app
 
 I build a streamlit app to easily view the data and predict the salary.
 
