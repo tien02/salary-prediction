@@ -1,4 +1,4 @@
-DATA_PATH = "stack-overflow-developer-survey-2022/survey_results_public.csv"
+DATA_PATH = "data/survey_results_public.csv"
 CKPT_PATH = "best_model.joblib"
 
 FEATURE_LIST = ["RemoteWork", "EdLevel", "YearsCodePro", "DevType", "LanguageHaveWorkedWith", "PlatformHaveWorkedWith", 
