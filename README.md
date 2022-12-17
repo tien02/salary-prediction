@@ -47,3 +47,6 @@ streamlit run web.py
 ```
 
 The result for reference only :>
+
+![](images/explore_page.png)
+![](images/predict_page.png)
