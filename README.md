@@ -2,7 +2,7 @@
 
 ## Dataset
 
-* Use [Stack Overflow Annual Developer Survey](https://insights.stackoverflow.com/survey) dataset to train model. 
+* Use **Stack Overflow Annual Developer Survey** to train model. Download the dataset at [here](https://insights.stackoverflow.com/survey)
 
 * For Salary prediction purpose, use 9 features `RemoteWork`, `EdLevel`, `YearsCodePro`, `DevType`, `LanguageHaveWorkedWith`, `PlatformHaveWorkedWith`, 
 `ToolsTechHaveWorkedWith`,
@@ -16,17 +16,19 @@
 
 * Ultilize [Ensemble Method](https://scikit-learn.org/stable/modules/ensemble.html) to train model.
 
-* Experiment with [RandomForest](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html), [Bagging](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.BaggingRegressor.html), [AdaBoost](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.AdaBoostRegressor.html), [GradientBoosting](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html). Details in [main.ipynb](main.ipynb)
+* Experiment with [Decision Tree](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeRegressor.html), [RandomForest](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html), [Bagging](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.BaggingRegressor.html), [AdaBoost](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.AdaBoostRegressor.html), [GradientBoosting](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html). 
 
-* Apply [GridSearchCV](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html) found best model is `Gradient Boosting (n_estimators=450)`.
+* Detail training and testing process in [main.ipynb](main.ipynb)
+
+* Apply [GridSearchCV](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html) found best hyperparameter for `Gradient Boosting`.
 
 ### Best Result
 
 | Metrics | Values |
 | --- | --- | 
-| [RMSE](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.mean_squared_error.html) | 37359.955759 |  
-| [MAE](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.mean_absolute_error.html) | 25795.854225 |   
-| [R2-score](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.r2_score.html) | 0.613329 | 
+| [RMSE](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.mean_squared_error.html) | 37068.786 |  
+| [MAE](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.mean_absolute_error.html) | 25121.021 |   
+| [R2-score](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.r2_score.html) | 0.619 | 
 
 ## Run Code
 
@@ -36,7 +38,7 @@
 pip install -r requirements.txt
 ```
 
-2. Download dataset & unzip
+2. Download dataset & extract zip file
 
 ```
 wget <link-to-data>
@@ -52,8 +54,7 @@ Run code:
 ```
 streamlit run web.py
 ```
-
-The result for reference only :>
+## Web demo
 
 ![](images/explore_page.png)
 ![](images/predict_page.png)
